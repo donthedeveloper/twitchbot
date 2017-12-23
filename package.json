@@ -1,0 +1,27 @@
+{
+  "name": "twitchbot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "dependencies": {
+    "dotenv": "^4.0.0",
+    "tmi.js": "^1.2.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.14.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "./node_modules/nodemon/bin/nodemon.js app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/donthedeveloper/twitchbot.git"
+  },
+  "author": "Don Hansen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/donthedeveloper/twitchbot/issues"
+  },
+  "homepage": "https://github.com/donthedeveloper/twitchbot#readme"
+}
