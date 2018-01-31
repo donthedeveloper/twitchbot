@@ -1,22 +1,22 @@
 module.exports = {
     entry: [
-      './browser/src/react/index.jsx'
+        './browser/src/react/index.jsx'
     ],
     module: {
-      rules: [
-        {
-          test: /jsx?$/,
-          exclude: /node_modules/,
-          use: ['babel-loader']
-        }
-      ]
+        rules: [
+            {
+                test: /jsx?$/,
+                exclude: /node_modules/,
+                use: ['babel-loader']
+            }
+        ]
     },
     resolve: {
-      extensions: ['.js', '.jsx']
+        extensions: ['.js', '.jsx']
     },
     output: {
-      path: __dirname + '/browser/public/js',
-      filename: 'bundle.js'
+        path: __dirname + '/browser/public/js',
+        filename: 'bundle.js'
     },
-  devtool: 'source-map'
-  };
+    devtool: 'source-map'
+};
