@@ -1,6 +1,6 @@
 module.exports = {
     entry: [
-        './browser/src/react/index.jsx'
+        './browser/src/react-redux/index.jsx'
     ],
     module: {
         rules: [
