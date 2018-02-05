@@ -1,8 +1,12 @@
 import React from 'react';
+import Chat from './Chat/Chat';
 
 const App = (props) => {
     return (
-        <p>Hello!</p>
+        <div>
+            <p>Hello!</p>
+            <Chat />
+        </div>
     );
 };
 
