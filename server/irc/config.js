@@ -9,5 +9,5 @@ module.exports = {
         username: 'ResponsiveBot',
         password: process.env.OAUTH
     },
-    channels: ['#summit1g']
+    channels: ['#reynad27']
 };

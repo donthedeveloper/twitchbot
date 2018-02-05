@@ -3,10 +3,10 @@ const options = require('./config');
 const eventHandler = require('./events');
 
 const irc = {
-    start: function() {
+    start: function(attachedTools) {
         const client = new tmi.client(options);
         client.connect();
-        eventHandler.attachEvents(client);
+        eventHandler.attachEvents(client, attachedTools);
     }
 };
 

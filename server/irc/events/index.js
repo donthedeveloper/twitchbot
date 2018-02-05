@@ -1,5 +1,5 @@
 module.exports = {
-    attachEvents: function(client) {
+    attachEvents: function(client, attachedTools) {
         client.on('message', function(channel, userstate, message, self) {
             // Don't listen to my own message
             if (self) return;
@@ -11,7 +11,10 @@ module.exports = {
                     break;
                 case 'chat':
                     // This is a chat message
-                    console.log(message);
+                    const messageObj = userstate;
+                    messageObj.message = message;
+                    attachedTools.socketServer.emit('chat message', messageObj);
+
                     break;
                 case 'whisper':
                     // This is a whisper

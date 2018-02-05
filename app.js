@@ -19,9 +19,13 @@ app.use(express.static('browser/public'));
 
 app.use('/', router);
 
-app.listen(process.env.PORT || 3000, function() {
+const server = app.listen(process.env.PORT || 3000, function() {
     console.log(chalk.blue(`App is listening on port ${this.address().port}`));
 });
 
-const irc = require('./server/irc');
-irc.start();
+const socketio = require('./server/socketio');
+const socketServer = socketio.start(server);
+
+// const irc = require('./server/irc');
+// const attachedTools = {socketServer}
+// irc.start(attachedTools);
